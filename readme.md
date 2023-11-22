@@ -26,9 +26,13 @@ Once docker is up visit `3000`
 For using cloud run
 
 First time setup
-```gcloud run deploy <service-name> --source . --add-cloudsql-instances=<cloud-sql-db> --allow-unauthenticated --cpu-boost --update-secrets=<DB_CONNECTION_STRING_SECRET>```
+```
+gcloud run deploy <service-name> --source . --add-cloudsql-instances=<cloud-sql-db> --allow-unauthenticated --cpu-boost --update-secrets=<DB_CONNECTION_STRING_SECRET>
+```
 
 Once done go to cloud run and redeploy with env variable as `DATABASE_URL` in secret section
 
 #### For subsequent deployment run 
-```SERVICE=<service-name> TAG=<v1-1-1> yarn deploy```
+```
+SERVICE=<service-name> TAG=<v1-1-1> yarn deploy
+```
