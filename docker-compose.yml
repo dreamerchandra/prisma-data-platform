@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  prisma-studio:
+    build: .
+    image: prisma-studio
+    container_name: prisma-studio
+    volumes:
+      - prisma-studio:/var/lib/node
+    ports:
+      - '3000:5555'
+
+volumes:
+  prisma-studio:

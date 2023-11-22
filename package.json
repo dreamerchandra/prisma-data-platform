@@ -1,0 +1,12 @@
+{
+  "name": "prisma-data-platform",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "prisma": "^5.6.0"
+  },
+  "scripts": {
+    "start": "docker compose  up --build -d",
+    "deploy": "gcloud run deploy $SERVICE --source . --tag=$TAG"
+  }
+}
